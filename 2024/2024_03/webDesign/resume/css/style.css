@@ -1,0 +1,105 @@
+body {
+ 
+  font-family: "CustomFont", sans-serif;
+}
+.resume-box{
+	width: 1180px;
+	height: 1000px;
+	margin: 20px auto;
+}
+.resume-left{
+	float: left;
+	width: 280px;
+	height: 900px;
+	color: white;
+	background-color: rgb(84, 141, 212);
+}
+.bgblue{
+	background-color: rgb(84, 141, 212) !important;
+}
+.resume-right{
+	float: right;
+	width: 780px;
+	height: 900px;
+}
+.resume-avt{
+	width: 280px;
+	height: 280px;
+	background-color: #0056B3;
+}
+.resume-avt img{
+	width: 280px;
+}
+.fontcolor{
+	color: rgb(84, 141, 212) !important;
+}
+.resume-name{
+	text-align: center;
+	padding: 10px;
+	font-size: 30px;
+	width: 280px;
+	height: 60px;
+}
+.resume-left-info{
+	margin: 20px auto;
+	/* border-color: white !important; */
+}
+.resume-right-info{
+	width: 780px;
+	height: 130px;
+}
+.resume-right-info-left{
+	padding: 20px;
+	width: 390px;
+	height: 130px;
+	float: left;
+}
+.resume-right-info-right{
+	padding: 20px;
+	width: 390px;
+	height: 130px;
+	float: right;
+}
+p1{
+	font-weight: bolder;
+}
+.resume-right-progress{
+	width: 780px;
+	height: 260px;
+}
+.resume-right-progress-left{
+	padding: 5px;
+	width: 360px;
+	height: 210px;
+	float: left;
+}
+.resume-right-progress-right{
+	padding: 5px;
+	width: 340px;
+	height: 210px;
+	float: right;
+}
+.resume-progress-box{
+	height: 30px;
+}
+.resume-progress{
+	height: 20px;
+}
+.resume-right-eval{
+	margin: 10px auto;
+	width: 780px;
+	height: 200px;
+}
+.resume-progress-box{
+	margin: 10px;
+	width: 680px;
+	height: 30px;
+}
+.resume-progress-box p{
+	float: left;
+	width:10%
+}
+.resume-progress{
+	float: left;
+	width: 85%;
+}
