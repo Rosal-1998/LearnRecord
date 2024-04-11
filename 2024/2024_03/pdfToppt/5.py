@@ -30,10 +30,10 @@ def update_ppt(ppt_file, small_top, small_left, small_width, small_height, large
         large_shape.height = large_height
     
     # 保存修改后的PPT文件
-    ppt.save('c99.ppt')
+    ppt.save('15C.ppt')
 
 # 指定要处理的PPT文件路径和文件名
-ppt_file = 'c99.ppt'
+ppt_file = '15.ppt'
 
 # 指定给定的位置和大小值
 small_top = 122555

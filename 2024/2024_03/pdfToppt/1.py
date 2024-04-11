@@ -15,8 +15,8 @@ def draw_rect_on_pdf(pdf_path, page_number, rect, output_pdf_path):
     doc.close()
 
 # 示例使用
-pdf_path = '1.pdf'
+pdf_path = '15.pdf'
 output_pdf_path = 'marked_pdf.pdf'
 page_number = 2  # 第一页
-rect = [6,33, 224, 160]  # 初步估计的位置和大小
+rect = [1,33, 215, 158]  # 初步估计的位置和大小
 draw_rect_on_pdf(pdf_path, page_number, rect, output_pdf_path)

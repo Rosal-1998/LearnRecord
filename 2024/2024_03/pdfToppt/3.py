@@ -8,8 +8,8 @@ def pdf_page_to_ppt_sections_high_dpi(pdf_path, ppt_path, dpi=1000):
     prs = Presentation()
 
     sections = [
-        [(30, 5), (200, 30)],   # 第1部分的位置和大小
-        [(6,33), (205, 148)]   # 第2部分的位置和大小
+        [(30, 5), (190, 30)],   # 第1部分的位置和大小
+        [(1,34), (215, 158)]   # 第2部分的位置和大小
         # 根据实际布局继续添加其他部分的位置和大小
     ]
 
@@ -42,6 +42,6 @@ def pdf_page_to_ppt_sections_high_dpi(pdf_path, ppt_path, dpi=1000):
 
     prs.save(ppt_path)
 
-pdf_path = 'C9.pdf'  # PDF文件路径
-ppt_path = 'C9.ppt'  # 输出PPT文件路径
+pdf_path = '15.pdf'  # PDF文件路径
+ppt_path = '15.ppt'  # 输出PPT文件路径
 pdf_page_to_ppt_sections_high_dpi(pdf_path, ppt_path, dpi=1000)
