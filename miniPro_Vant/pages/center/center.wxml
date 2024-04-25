@@ -1,0 +1,13 @@
+<!-- center.wxml -->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <text class="" selectable="false" space="false" decode="false">个人中心</text>
+  </view>
+ <van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item icon="home-o" url='/pages/home/home' link-type='reLaunch'>首页</van-tabbar-item>
+    <van-tabbar-item icon="search" url='/pages/mall/mall' link-type='reLaunch'>商城</van-tabbar-item>
+    <van-tabbar-item icon="friends-o" url='/pages/center/center'  link-type='reLaunch'>
+      个人中心
+    </van-tabbar-item>
+  </van-tabbar>
+</scroll-view>
