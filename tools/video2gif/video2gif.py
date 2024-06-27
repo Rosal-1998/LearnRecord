@@ -21,9 +21,9 @@ def convert_video_to_gif(video_path, gif_path, start_time, end_time, fps=10):
     clip.write_gif(gif_path)
 
 # 示例用法
-video_path = 'indexBugFixed.mp4'
-gif_path = 'output.gif'
+video_path = 'indexBugFixed2.mp4'
+gif_path = 'output2.gif'
 start_time = 0  # 从第10秒开始
-end_time = 3    # 到第20秒结束
+end_time = 8    # 到第20秒结束
 
 convert_video_to_gif(video_path, gif_path, start_time, end_time)
