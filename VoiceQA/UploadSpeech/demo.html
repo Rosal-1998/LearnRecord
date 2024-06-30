@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js & Axios Audio Upload</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+    <div id="app">
+        <div class="question" v-for="(item,index) in questionList">
+            {{item.question}}
+            <span style="display: block;" :class="index == currt ? 'red':''" v-for="(item,index) in item.answer">{{index}} {{item}} ~~~{{currt}}</span>
+        </div>
+        <input type="file" @change="onFileChange">
+        <button @click="uploadFile" :disabled="!selectedFile">Upload File</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                currt: -1,
+                selectedFile: null,
+                questionList: [{
+                    question: "_________,遥看瀑布挂前川的前一句是？",
+                    answer: ['飞流直下三千尺', '疑似银河落九天', '日照香炉生紫烟', '望庐山瀑布李白']
+                }]
+            },
+            methods: {
+                findMaxIndex(arr) {
+                    let maxIndex = -1;
+                    let maxValue = -Infinity;
+
+                    for (let i = 0; i < arr.length; i++) {
+                        if (arr[i] > maxValue) {
+                            maxValue = arr[i];
+                            maxIndex = i;
+                        }
+                    }
+                    console.log(maxIndex,'11111111111111')
+
+                    return maxIndex;
+                },
+                onFileChange(event) {
+                    this.selectedFile = event.target.files[0];
+                },
+                async uploadFile() {
+                    if (!this.selectedFile) {
+                        alert('Please select a file.');
+                        return;
+                    }
+
+                    const formData = new FormData();
+                    formData.append('audioFile', this.selectedFile);
+                    formData.append('answerList', JSON.stringify(this.questionList[0].answer))
+
+                    try {
+                        const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        });
+                        console.table(response.data.result);
+                        this.currt = this.findMaxIndex(response.data.result);
+                
+                        console.log('currt',this.currt)
+                        this.updateStyles();
+                        // alert('File uploaded successfully.');
+                    } catch (error) {
+                        // console.error(error);
+                        // alert('An error occurred while uploading the file.');
+                    }
+                },
+                updateStyles() {
+                    // 获取所有 span 元素
+                    const spans = document.querySelectorAll('span');
+                    // 遍历每个 span 元素，并改变样式
+                    spans.forEach((span, index) => {
+                        span.classList.toggle('red', index === this.currt);
+                    })}
+            }
+        });
+    </script>
+</body>
+
+</html>
