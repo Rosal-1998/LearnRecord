@@ -52,8 +52,10 @@ export default {
 		changeQuestion(state){
 			if(state == 'next'){
 				this.questionIndex = this.questionIndex +1
+				this.currt = -1
 			}else{
 				this.questionIndex = this.questionIndex -1
+				this.currt = -1
 			}
 		},
 
@@ -82,7 +84,7 @@ export default {
 
                     const formData = new FormData();
                     formData.append('audioFile', this.selectedFile);
-                    formData.append('answerList', JSON.stringify(this.questionList[0].answer))
+                    formData.append('answerList', JSON.stringify(this.questionList[this.questionIndex].answer))
 
                     try {
                         const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
