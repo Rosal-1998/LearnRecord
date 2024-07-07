@@ -1,77 +1,102 @@
-// import { getImageUrl } from './utils.js';
-export function getImageUrl(imageId, size = 's') {
+import { people,recipes,poem } from './data.js';
+
+ function List() {
+  const listItems = people.map(person =>
+    <li key={person.id}>
+      <p>
+        <b>{person.name}:</b>
+        {' ' + person.profession + ' '}
+        因{person.accomplishment}而闻名世界
+      </p>
+    </li>
+
+  
+  );
+  const mathList = people.filter(person => person.profession ==='数学家')
+  const chemistList = people.filter(person => person.profession ==='化学家')
+  const chemist = chemistList.map(chemistList =>
+    <li key={chemistList.id}>
+      <p>
+        <b>{chemistList.name}:</b>
+        {' ' + chemistList.profession + ' '}
+        因{chemistList.accomplishment}而闻名世界
+      </p>
+    </li>
+  )
+  const math = mathList.map(mathList =>
+    <li key={mathList.id}>
+      <p>
+        <b>{mathList.name}:</b>
+        {' ' + mathList.profession + ' '}
+        因{mathList.accomplishment}而闻名世界
+      </p>
+    </li>
+  )
   return (
-    'https://i.imgur.com/' +
-    imageId +
-    size +
-    '.jpg'
+    <article>
+      <h1>数学家</h1>
+      <ul>{math}</ul>
+      <h1>化学家</h1>
+      <ul>{chemist}</ul>
+    </article>
   );
 }
-function Profile ({imageId,
-  name,
-  profession,
-  awards,
-  discovery,
-  imageSize = 70
-}){
-  return (
-  <>
- <section className="profile">
-        <h2>{name}</h2>
-        <img
-          className="avatar"
-          src={getImageUrl('szV5sdG')}
-          alt="Maria Skłodowska-Curie"
-          width={70}
-          height={70}
-        />
-        <ul>
-          <li>
-            <b>Profession: </b> 
-            {profession}
+
+
+function getRecipesList(id){
+ const list = recipes.filter(item =>item.id === id)
+ console.log('id:',id,'list:',list)
+ const recipeslist = list.map(item =>
+<li>
+{item.ingredients}
+</li>
+    
+ )
+ console.log(recipeslist)
+return (
+  recipeslist
+)
+}
+
+function recipesList(){
+ 
+  const name = recipes.map(item => 
+    
+    <div key = {item.id}>
+  <h2>
+      {item.name}
+    </h2>
+    <ul>
+      {
+        item.ingredients.map(food => 
+          <li key={food}>
+            {food}
           </li>
-          <li>
-            <b>Awards: 4 </b> 
-            (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)
-          </li>
-          <li>
-            <b>Discovered: </b>
-            polonium (chemical element)
-          </li>
-        </ul>
-      </section>
-  </>
+        )
+      }
+    </ul>
+    </div>
+  )
+  return(
+    <>
+    <h1>
+      菜谱
+    </h1>
+    {name}
+    </>
   )
 }
-export default function Gallery() {
+function Poem() {
   return (
-    <div>
-      <h1>Notable Scientists</h1>
-     
-      <section className="profile">
-        <h2>Katsuko Saruhashi</h2>
-        <img
-          className="avatar"
-          src={getImageUrl('YfeOqp2')}
-          alt="Katsuko Saruhashi"
-          width={70}
-          height={70}
-        />
-        <ul>
-          <li>
-            <b>Profession: </b> 
-            geochemist
-          </li>
-          <li>
-            <b>Awards: 2 </b> 
-            (Miyake Prize for geochemistry, Tanaka Prize)
-          </li>
-          <li>
-            <b>Discovered: </b>
-            a method for measuring carbon dioxide in seawater
-          </li>
-        </ul>
-      </section>
-    </div>
+    <article>
+      {poem.lines.map((line, index) =>
+        <p key={index}>
+          {line}
+        </p>
+      )}
+    </article>
   );
 }
+
+
+export default Poem
