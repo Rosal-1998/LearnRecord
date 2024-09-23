@@ -18,6 +18,7 @@ icon:weixin qiufengblue
 :::
 
 ## 教育背景
+---
 
 :::left
 **北京邮电大学 - 计算机科学与技术**
