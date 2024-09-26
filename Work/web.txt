@@ -1,0 +1,258 @@
+es5需要通过构造函数来创建对象
+var a = {
+  x:1,
+  f:function(p){
+    console.log('a',p)
+    console.log('a,this.x',this.x)
+    console.log(p+200+this.x)
+  }
+  
+}
+b = {
+  x:2,
+  f:function(p){
+    console.log('b',p)
+    console.log(p+100+this.x)
+  }
+}
+a.f.call(b,10)
+212
+
+
+var arr = []
+var a = [1,2,3]
+a.forEach(p => {
+  if(p>2){
+    return
+  }
+  arr.push(p)
+  
+});
+console.log(arr[1])
+2
+
+
+console.log([a.x+b,a.y].join("---")) 
+7---5
+
+var a = 2
+b = a +'1'-1
+console.log(typeof(b)+b)
+number 20
+
+
+a = b+a   // 5 
+b = a - b // 5- 2 = 2
+a = a- b
+
+
+var a = 1.45678;
+var roundedA = Math.round(a * 100) / 100;
+console.log(roundedA); // 输出结果为1.46
+
+JSON.stringify(a);
+
+数学运算（Mathematical Operations）：
+你可以在Sass中进行数学运算，如加、减、乘、除等，这在处理布局和动画时非常有用。
+条件语句和循环（Control Directives）：
+Sass提供了@if、@else、@for、@each和@while等控制指令，允许你根据条件或迭代来编写更动态的样式。
+
+、$("body>.pi-main>.pi-head")中间的大于符号(>)是干什么用的? 
+子选择器
+
+
+var btnSave = document.getElementById('btnSave');
+
+// 获取自定义属性pi-vcl的值
+var piVclValue = btnSave.getAttribute('pi-vcl');
+
+// 检查属性是否存在
+if (piVclValue === null) {
+    // 如果不存在，设置为空字符串
+    btnSave.setAttribute('pi-vcl', '');
+} else {
+    // 如果存在，可以在这里使用piVclValue
+    console.log(piVclValue); // 示例：打印出pi-vcl的值
+}
+
+
+  var a = {
+    x: {
+      m: 3,
+      n: 4,
+    },
+    y: [5, 6],
+  }
+  b = $.extend({}, a, { x: { m: 33 }, y: [55] })
+  var c = $.extend(true, {}, a, { x: { m: 33 }, y: [55] })
+  console.log(b.x.n, b.y[1], c.x.n, c.y[1])
+不知道
+
+var a = 25;
+var b = `我今年${a}岁`;
+
+(function() {
+  var a; // 变量a的声明被提升到这里
+  a = 2; // 然后在这里赋值为2
+
+  (function() {
+    console.log(a); // 这时a已经声明，但是因为赋值在下面，所以此时a是undefined
+    var a = 3; // 这里的赋值不会提升，所以这里的a是局部变量
+  })();
+
+})();
+undefined
+
+、jquery中的ajax要禁止使用缓存怎么设置参数?
+cache : false
+
+谷歌浏览器有哪些可用的客户端存储技术?
+localStorage: 提供一种永久性存储机制，数据在页面会话之间持续存在，除非被显式清除。
+sessionStorage: 类似于localStorage，但数据仅在当前会话（标签页）中有效，一旦标签页关闭，数据就会被清除。
+
+slot :
+将夫组件的内容传递给子组件的特定位置
+栅栏系统：flexbox
+
+ref:
+直接访问组件或 DOM 元素
+vue中希望等到整个视图都渲染完毕再执行的代码需要放到哪个vue自带函数中?mounted
+
+props:组件通信
+
+
+vue中v-bind:value和v-modal的区别是什么?
+v-bind:单向绑定，不需要自动更新的时候可以用
+v-model:双向绑定，自动更新
+
+padding:内边距
+margin:外边距
+
+align-item:center垂直方向居中
+
+
+单例模式（Singleton） - 确保一个类只有一个实例，并提供一个访问它的全局点。
+工厂模式（Factory） - 用于创建对象，但在创建时不会暴露创建逻辑，而是通过一个共同的接口来创建对象。
+构造器模式（Constructor） - 用于创建特定类型的对象。
+模块模式（Module） - 封装变量和函数，创建私有和公共作用域。
+发布-订阅模式（Observer） - 也称为事件模式，定义了对象之间的一对多的依赖关系，当一个对象改变状态时，所有依赖于它的对象都将得到通知。
+中介者模式（Mediator） - 通过一个中介对象来封装一系列的对象交互，使对象之间不需要显式地相互引用，从而降低它们之间的耦合。
+原型模式（Prototype） - 使用原型实例指定创建对象的种类，并通过拷贝这些原型创建新的对象。
+命令模式（Command） - 将请求封装为一个对象，从而允许用户使用不同的请求、队列或日志请求，并支持可撤销的操作。
+装饰器模式（Decorator） - 动态地给一个对象添加一些额外的职责，而不改变其结构。
+策略模式（Strategy） - 定义一系列的算法，把它们一个个封装起来，并且使它们可以互相替换。
+适配器模式（Adapter） - 允许不兼容的对象通过一个中介来协同工作。
+迭代器模式（Iterator） - 提供一种方法顺序访问一个聚合对象中各个元素，而又不暴露其内部的表示
+
+
+在例子 $("btnSave").on("click.pi.test", function() {...}); 中，.pi.test 的作用如下：
+
+click 是事件类型，表示当按钮被点击时触发事件。
+.pi 和 .test 是自定义的命名空间，它们可以是你定义的任何字符串，用于标识这个特定的事件处理程序。
+
+在JavaScript中，isNaN() 函数用于判断一个值是否是“非数字”（Not-a-Number），而 isFinite() 函数用于判断一个值是否是“有限”的，即不是 Infinity、-Infinity 或 NaN。
+
+isNaN(Infinity) 的返回值是 false，因为 Infinity 是一个有效的数字表示，尽管它表示无穷大，但它不是“非数字”。
+isFinite(Infinity) 的返回值是 false，因为 Infinity 表示无穷大，不是有限数字。
+isNaN(Infinity); // 返回 false
+isFinite(Infinity); // 返回 false
+
+let const 变量声明提升
+
+vue中绑定文本的指令是绑定html代码的指令是
+v-text v-html
+
+垂直居中：
+/* 父元素设置 */
+display: flex;
+align-items: center;
+
+height: 100px; /* 父元素高度 */
+line-height: 100px; /* 与高度相同 */
+
+margin: 0 auto;
+
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%; /* 创建圆形 */
+  box-shadow: 0 0 0 10px #000, /* 第一层边框 */
+              0 0 0 20px #333, /* 第二层边框 */
+              0 0 0 30px #666; /* 第三层边框 */
+}
+
+
+数据类型
+ES6新增了一种数据类型，其余数据类型在ES5中已经存在：
+
+Symbol: 表示独一无二的值，常用于创建对象的私有成员。
+以下是ES6中的原始数据类型：
+
+Undefined
+Null
+Boolean
+Number
+String
+Symbol (新增)
+以及对象类型：
+
+Object
+Array
+Function
+Date
+RegExp
+Map (新增)
+Set (新增)
+WeakMap (新增)
+WeakSet (新增)
+Promise (新增)
+Proxy (新增)
+Reflect (新增)
+新增的API
+以下是一些ES6中新增的API和方法：
+
+Array
+Array.from(): 从类数组对象或可迭代对象创建一个新的数组实例。
+Array.of(): 创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
+Array.prototype.find(): 找到第一个满足测试函数的元素。
+Array.prototype.findIndex(): 找到第一个满足测试函数的元素的索引。
+Array.prototype.fill(): 用一个固定值填充数组中从起始索引到终止索引内的全部元素。
+Array.prototype.entries(): 返回一个新的数组迭代器对象，该对象包含数组中每个索引的键/值对。
+Array.prototype.keys(): 返回一个新的数组迭代器对象，它包含数组中每个索引的键。
+Array.prototype.values(): 返回一个新的数组迭代器对象，它包含数组中每个索引的值。
+String
+String.prototype.includes(): 判断一个字符串是否包含在另一个字符串中，返回布尔值。
+String.prototype.startsWith(): 判断字符串是否以指定的子字符串开头。
+String.prototype.endsWith(): 判断字符串是否以指定的子字符串结尾。
+String.prototype.repeat(): 返回指定次数重复的字符串。
+
+优化：
+1. 代码优化
+压缩与合并：使用工具如UglifyJS、Webpack、Gulp等压缩和合并JavaScript和CSS文件，减少文件体积。
+Tree Shaking：消除未引用代码，减少最终文件的大小。
+代码拆分：将代码分割成多个小块，按需加载，以减少初始加载时间。
+2. 资源优化
+图片优化：使用压缩工具减小图片文件大小，使用现代格式如WebP。
+字体优化：使用Web字体时，仅加载必要的字体变体和字符集。
+使用CDN：内容分发网络（CDN）可以加快资源的加载速度。
+3. 网络优化
+HTTP/2：使用HTTP/2协议，支持多路复用，减少TCP连接数。
+DNS预解析：通过在<link>标签中使用rel="dns-prefetch"预解析域名。
+预连接：使用rel="preconnect"告知浏览器提前建立连接。
+4. 缓存利用
+浏览器缓存：通过设置HTTP缓存头（如Cache-Control）来缓存资源。
+Service Workers：利用Service Workers来缓存关键资源，实现离线访问。
+5. 渲染优化
+CSS和JavaScript优化：避免使用CSS表达式，减少重绘和回流。
+使用requestAnimationFrame：对于动画，使用requestAnimationFrame代替setTimeout或setInterval。
+虚拟DOM：使用虚拟DOM来减少对实际DOM的操作。
+6. 懒加载
+图片懒加载：只有当图片进入可视区域时才开始加载。
+组件懒加载：使用代码拆分，按需加载组件。
+7. 用户体验优化
+交互反馈：为用户操作提供即时反馈，如按钮点击效果。
+骨架屏：在内容加载期间显示占位符，提升感知性能。
+8. SEO优化
+语义化HTML：使用正确的HTML标签，有助于搜索引擎解析页面内容。

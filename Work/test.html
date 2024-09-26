@@ -1,0 +1,77 @@
+<script>
+  // var a = {
+  //   x:1,
+  //   f:function(p){
+  //     console.log('a',p)
+  //     console.log('a,this.x',this.x)
+  //     console.log(p+200+this.x)
+  //   }
+
+  // }
+  // b = {
+  //   x:2,
+  //   f:function(p){
+  //     console.log('b',p)
+  //     console.log(p+100+this.x)
+  //   }
+  // }
+  // a.f.call(b,10)
+
+  // var arr = []
+  // var a = [1,2,3]
+  // a.forEach(p => {
+  //   if(p>2){
+  //     return
+  //   }
+  //   arr.push(p)
+
+  // });
+  // console.log(arr[1])
+
+  // var a = {x:2}
+  // b = 3
+  // c = a ;
+  // c.x = 4
+  // c.y = 5
+
+  // console.log('a.x',a.x)
+  // console.log([a.x+b,a.y].join("---"))
+
+  // var a = 2
+  // b = a +'1'-1
+  // console.log(typeof(b)+b)
+
+  // var a = 2
+  // b = 3
+
+  // a = b+a   // 5
+  // b = a - b // 5- 2 = 2
+  // a = a- b
+  // console.log(a,b)
+
+  // var a = {
+  //   x: {
+  //     m: 3,
+  //     n: 4,
+  //   },
+  //   y: [5, 6],
+  // }
+  // b = $.extend({}, a, { x: { m: 33 }, y: [55] })
+  // var c = $.extend(true, {}, a, { x: { m: 33 }, y: [55] })
+  // console.log(b.x.n, b.y[1], c.x.n, c.y[1])
+
+//   var a = 25;
+// var b = `我今年${a}岁`;
+// console.log(b)
+
+(function() {
+  var a; // 变量a的声明被提升到这里
+  a = 2; // 然后在这里赋值为2
+
+  (function() {
+    console.log(a); // 这时a已经声明，但是因为赋值在下面，所以此时a是undefined
+    var a = 3; // 这里的赋值不会提升，所以这里的a是局部变量
+  })();
+
+})();
+</script>
