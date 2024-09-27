@@ -1,0 +1,72 @@
+{
+  "2023": {
+      "sumPopulation": 140967,
+      "malePopulation": 72032,
+      "famalePopulation": 68935,
+      "cityPopulation": 93267,
+      "villagePopulation": 47700
+  },
+  "2022": {
+      "sumPopulation": 141175,
+      "malePopulation": 72206,
+      "famalePopulation": 68969,
+      "cityPopulation": 92071,
+      "villagePopulation": 49104
+  },
+  "2021": {
+      "sumPopulation": 141260,
+      "malePopulation": 72311,
+      "famalePopulation": 68949,
+      "cityPopulation": 91425,
+      "villagePopulation": 49835
+  },
+  "2020": {
+      "sumPopulation": 141212,
+      "malePopulation": 72357,
+      "famalePopulation": 68855,
+      "cityPopulation": 90220,
+      "villagePopulation": 50992
+  },
+  "2019": {
+      "sumPopulation": 141008,
+      "malePopulation": 72039,
+      "famalePopulation": 68969,
+      "cityPopulation": 88426,
+      "villagePopulation": 52582
+  },
+  "2018": {
+      "sumPopulation": 140541,
+      "malePopulation": 71864,
+      "famalePopulation": 68677,
+      "cityPopulation": 86433,
+      "villagePopulation": 54108
+  },
+  "2017": {
+      "sumPopulation": 140011,
+      "malePopulation": 71650,
+      "famalePopulation": 68361,
+      "cityPopulation": 84343,
+      "villagePopulation": 55668
+  },
+  "2016": {
+      "sumPopulation": 139232,
+      "malePopulation": 71307,
+      "famalePopulation": 67925,
+      "cityPopulation": 81924,
+      "villagePopulation": 57308
+  },
+  "2015": {
+      "sumPopulation": 138326,
+      "malePopulation": 70857,
+      "famalePopulation": 67469,
+      "cityPopulation": 79302,
+      "villagePopulation": 59024
+  },
+  "2014": {
+      "sumPopulation": 137646,
+      "malePopulation": 70522,
+      "famalePopulation": 67124,
+      "cityPopulation": 76738,
+      "villagePopulation": 60908
+  }
+}

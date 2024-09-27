@@ -1,0 +1,18 @@
+{
+  "chart": {
+    "type": "column"
+  },
+  "title": {
+    "text": " "
+  },
+  "xAxis": {
+    "categories": []
+  },
+  "yAxis": {
+    "title": {
+      "text": " "
+    }
+  },
+  "series": [],
+  "init":0
+}

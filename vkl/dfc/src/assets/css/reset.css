@@ -1,0 +1,41 @@
+html {
+  line-height: 1.2;
+  font-family: Source Han Sans CN;
+}
+
+body, h1, h2, h3, h4, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  vertical-align: top;
+}
+i{
+	font-style: normal;
+}
+.f-blue{
+	color: #4892FD;
+}
+.f-gray{
+	color: #333333;
+}
+.f-orange{
+	color: #FB9E2B;
+}
+.f-red{
+	color: #F73A0B;
+}
+.f-green{
+	color: #4AD882;
+}
+.f-clearfix:after{content:'';display:block;height:0;overflow:hidden;clear:both;visibility:hidden;}

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="charts-box">
+  <qiun-wx-ucharts 
+    type="column"
+    opts="{{opts}}"
+    chartData="{{chartData1}}"
+  />
+</view>
+<view class="charts-box">
+  <qiun-wx-ucharts 
+    type="ring"
+    opts="{{opts}}"
+    chartData="{{chartData2}}"
+  />
+</view>

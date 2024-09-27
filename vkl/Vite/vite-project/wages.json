@@ -1,0 +1,62 @@
+{
+  "2022": {
+      "cityWages": 190820.2,
+      "stateownedcityWage": 69000.2,
+      "collectivecityWages": 1809.3,
+      "otherWages": 120010.8
+  },
+  "2021": {
+      "cityWages": 180817.5,
+      "stateownedcityWage": 64547.9,
+      "collectivecityWages": 1920,
+      "otherWages": 114349.7
+  },
+  "2020": {
+      "cityWages": 164126.9,
+      "stateownedcityWage": 59628.1,
+      "collectivecityWages": 1841.8,
+      "otherWages": 102657
+  },
+  "2019": {
+      "cityWages": 154296.1,
+      "stateownedcityWage": 53743.7,
+      "collectivecityWages": 1841.5,
+      "otherWages": 98710.9
+  },
+  "2018": {
+      "cityWages": 141480,
+      "stateownedcityWage": 51126.6,
+      "collectivecityWages": 2082.3,
+      "otherWages": 88271.1
+  },
+  "2017": {
+      "cityWages": 129889.1,
+      "stateownedcityWage": 48884.1,
+      "collectivecityWages": 2215.6,
+      "otherWages": 78789.3
+  },
+  "2016": {
+      "cityWages": 120074.8,
+      "stateownedcityWage": 44462.9,
+      "collectivecityWages": 2268.6,
+      "otherWages": 73343.3
+  },
+  "2015": {
+      "cityWages": 112007.8,
+      "stateownedcityWage": 40387.9,
+      "collectivecityWages": 2239.4,
+      "otherWages": 69380.5
+  },
+  "2014": {
+      "cityWages": 102817.2,
+      "stateownedcityWage": 36106.6,
+      "collectivecityWages": 2302.7,
+      "otherWages": 64408
+  },
+  "2013": {
+      "cityWages": 93064.3,
+      "stateownedcityWage": 33359.6,
+      "collectivecityWages": 2195.8,
+      "otherWages": 57508.9
+  }
+}
